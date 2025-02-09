@@ -1,8 +1,8 @@
 const UserModel = require("../models/userModel");
-//const PasswordResetToken = require("../models/passwordResetToken");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+// Request password reset
 async function passwordResetController(req, res) {
     const { token } = req.query;
     const { newPassword } = req.body;

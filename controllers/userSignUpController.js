@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const sendVerificationEmail = require("../config/nodemailer");
 
-
+// Controller for user sign-up
 async function userSignUpController(req, res){
 
     const {name, email, password, role} = req.body;
@@ -13,7 +13,6 @@ async function userSignUpController(req, res){
             return res.status(400).json({ message: "All fields are required" })
         }
     
-
         // Check if user already exists
         const confirmUserEmail = await UserModel.findOne({email})
         if (confirmUserEmail){

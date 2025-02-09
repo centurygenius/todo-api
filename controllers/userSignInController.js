@@ -2,7 +2,7 @@ const UserModel = require("../models/userModel");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-
+// Controller for user sign-in
 async function userSignInController(req, res) {
     const { email, password } = req.body;
 

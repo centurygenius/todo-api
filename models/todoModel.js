@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// Create schema for todo model
 const todoSchema = new mongoose.Schema({
     title: { type: String, required: true },
     description: { type: String },

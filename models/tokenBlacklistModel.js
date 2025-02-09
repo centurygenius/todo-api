@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-// Stores blacklisted tokens along with their expiration time.
+// Schema for tokenBlacklist to store blacklisted tokens along with their expiration time.
 const tokenBlacklistSchema = new mongoose.Schema({
     token: { type: String, required: true },
     expiresAt: { type: Date, required: true },

@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const TokenModel = require("../models/tokenBlacklistModel");
-//const redisClient = require("../config/redis"); // Redis setup for blacklisting tokens
 
+// Sign out user
 async function signOutController(req, res) {
     try {
         const token = req.header("Authorization")?.replace("Bearer ", "");

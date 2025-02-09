@@ -1,5 +1,6 @@
 const UserModel = require("../models/userModel");
 
+// Controller for email verification
 async function verifyEmailController(req, res) {
     const { token } = req.query;
 

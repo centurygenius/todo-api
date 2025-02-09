@@ -1,5 +1,6 @@
 const nodemailer = require("nodemailer");
 
+// Nodemailer configuration for email verification
 async function sendVerificationEmail(email, verificationToken) {
   try {
     const transporter = nodemailer.createTransport({
@@ -21,6 +22,7 @@ async function sendVerificationEmail(email, verificationToken) {
 
     const verificationLink = `${process.env.BASE_URL}/api/verify-email?token=${verificationToken}`;
 
+    // Send verification email
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: email,

@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const TokenModel = require("../models/tokenBlacklistModel");
-//const redisClient = require("../config/redis");
 
+// Middleware for authentication
 async function authMiddleware(req, res, next) {
     const token = req.header("Authorization");
 
